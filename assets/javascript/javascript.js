@@ -1,4 +1,3 @@
-
 var hero;
 var enemy;
 var fight = false;
@@ -48,10 +47,10 @@ function createEnemies() {
 createChar();
 
 $(".charBox").on("click", function chosenClick() {
-    var heroIndex = $(this).index()
-    hero = character.splice(heroIndex, 1)
+    var heroIndex = $(this).index();
+    hero = character.splice(heroIndex, 1);
     $("#chosen-character").append(this);
-    $("#characters").html("")
+    $("#characters").html("");
     console.log(hero);
     createEnemies();
     $(".charBox").off("click", chosenClick);
@@ -99,6 +98,7 @@ $("#attack").on("click", function attack() {
         if (character.length === 0) {
             $("#damage-info").html("You WIN!!!");
             $("#reset").show();
+            $("#attack").off("click", attack);
         }
         if (hero[0].health <= 0) {
             $("#hero-health").html(0);
