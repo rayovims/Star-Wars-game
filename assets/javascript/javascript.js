@@ -27,7 +27,12 @@ character[3] = {
     health: 180,
     image: "assets/images/darthmaul.jpeg"
 };
-
+character[4] = {
+    name: "Juan",
+    attack: 5,
+    health: 1000000,
+    image: "assets/images/jesus.jpg"
+};
 
 function createChar() {
 
@@ -75,7 +80,7 @@ $(".charBox").on("click", function chosenClick() {
 
 $("#attack").on("click", function attack() {
     if (fight === false) {
-        $("#damage-info").html("Choose an enemy!")
+        $("#damage-info").html("Choose an enemy!");
     } else {
 
         attackVal = attackVal + hero[0].attack;
@@ -90,20 +95,22 @@ $("#attack").on("click", function attack() {
         $("#damage-info").html("You attacked " + enemy[0].name + " for " + attackVal + " damage. <br>" + enemy[0].name + " attacked you for " + enemy[0].attack + " damage.");
 
         console.log(attackVal)
+
         if (enemy[0].health <= 0) {
             $("#damage-info").html("You have defeated " + enemy[0].name + ". You can choose to fight another enemy.")
             $("#chosen-enemy").empty()
             fight = false;
         }
         if (character.length === 0) {
-            $("#damage-info").html("You WIN!!!");
+            $("#damage-info").html("<h1>You WIN!!!</h1>");
             $("#reset").show();
             $("#attack").off("click", attack);
+            $("#chosen-enemy").empty();
         }
         if (hero[0].health <= 0) {
             $("#hero-health").html(0);
             $("#attack").off("click", attack);
-            $("#damage-info").html("You LOSE!!!");
+            $("#damage-info").html("<h1>You LOSE!!!</h1>");
             $("#reset").show();
         }
     }

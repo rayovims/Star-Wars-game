@@ -14,16 +14,18 @@ h1 {
     color: black;
     text-align: center;
     display: inline-block;
+    margin-bottom: 5px;
 }
 .enemyBox {
-    background-color: white;
+    background-color: black;
     margin-right: 10px;
     width: 200px;
     height: 150px;
-    border: 3px solid green;
-    color: black;
+    border: 3px solid white;
+    color: white;
     display: inline-block;
     text-align: center;
+    margin-bottom: 5px;
 }
 body {
     clear: both;
@@ -43,22 +45,22 @@ img {
 #chosen-character {
     margin-top: 10px;
 }
-
 .enemies {
     margin-top: 20px;
 }
-
 #fight {
     margin-top: 20px;
 }
 
 #chosen-enemy {
     margin-top: 10px;
-    background: ;
-
 }
 button{
     font-size: 15px;
     background: white;
     color: black;
+    border-radius: 10px;
+}
+#attack {
+    margin-bottom: 10px;
 }
