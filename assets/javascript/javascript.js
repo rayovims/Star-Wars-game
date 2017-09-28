@@ -110,7 +110,7 @@ $("#attack").on("click", function attack() {
         if (hero[0].health <= 0) {
             $("#hero-health").html(0);
             $("#attack").off("click", attack);
-            $("#damage-info").html("<h1>You LOSE!!!</h1>");
+            $("#damage-info").html("<h1>" + enemy[0].name + " " + "made you his son!</h1>");
             $("#reset").show();
         }
     }
